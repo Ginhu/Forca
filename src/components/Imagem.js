@@ -11,7 +11,7 @@ export default function Imagem(props) {
 
     return (
         <>
-            <img src={imagens[props.contador]}/>
+            <img src={imagens[props.contador]} data-test="game-image"/>
         </>
     )
 }

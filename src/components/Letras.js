@@ -35,7 +35,7 @@ export default function Letras(props) {
 
     return (
         <div>
-            <button onClick={()=>escolheLetra(props.letra)} disabled={props.habilitar.includes(props.letra) ? true : false }>{props.letra.toUpperCase()}</button>
+            <button onClick={()=>escolheLetra(props.letra)} disabled={props.habilitar.includes(props.letra) ? true : false } data-test="letter">{props.letra.toUpperCase()}</button>
         </div>
     )
 }
