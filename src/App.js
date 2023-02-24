@@ -12,6 +12,8 @@ function App() {
   const [contador, setContador] = useState(0)
   const [palavra, setPalavra] = useState([])
   const [palavraEscondida, setPalavraEscondida] = useState([])
+  const [jogoGanho, setJogoGanho] = useState("")
+  const [jogoPerdido, setJogoPerdido] = useState("")
 
   return (
     <div className="principal">
@@ -21,12 +23,15 @@ function App() {
       contador={contador} setContador={setContador}
       palavra={palavra} setPalavra={setPalavra}
       palavraEscondida={palavraEscondida} setPalavraEscondida={setPalavraEscondida}
+      jogoGanho={jogoGanho} jogoPerdido={jogoPerdido}
+      setJogoGanho={setJogoGanho} setJogoPerdido={setJogoPerdido}
       />
       <div className="divLetras">
         {alfabeto.map((c)=> <Letras key={c} letra={c} 
         habilitar={habilitar} setHabilitar={setHabilitar}
         palavra={palavra} palavraEscondida={palavraEscondida} setPalavraEscondida={setPalavraEscondida}
         contador={contador} setContador={setContador}
+        setJogoGanho={setJogoGanho} setJogoPerdido={setJogoPerdido}
         />)}
       </div>
     </div>

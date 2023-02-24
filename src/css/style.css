@@ -8,11 +8,12 @@
 .divLetras {
     width: 85vw;
     height: 20vh;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 55px;
 }
 
 .divLetras button {
@@ -25,7 +26,7 @@
 .divJogo {
     width: 85vw;
     height: 60vh;
-    background-color: aqua;
+    /* background-color: aqua; */
     margin-top: 5vh;
     display: flex;
     justify-content: space-between;
@@ -34,7 +35,7 @@
 .divComandos {
     width: 35vw;
     height: 100%;
-    background-color: blue;
+    /* background-color: blue; */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -46,20 +47,25 @@
     width: 15vw;
     height: 5vh;
     position: absolute;
+    color: #ffffff;
+    background-color: #27ae60;
     top: 15vh;
     right: 5vw;
     font-size: 1.5vw;
+    font-weight: 600;
+    border-radius: 8px;
 }
 
 .divComandos input {
-    font-size: 2vw;
+    font-size: 3vw;
+    font-weight: 900;
     letter-spacing: 15px;
     margin-bottom: 5vh;
     width: 33vw;
     display: flex;
     text-align: center;
     border-style: none;
-    background-color: blue;
+    background-color: #ffffff;
 }
 
 img {
@@ -68,4 +74,12 @@ img {
 
 .escondido {
     visibility: hidden;
+}
+
+.jogoGanho {
+    color: #27ae60;
+}
+
+.jogoPerdido {
+    color: #ff0000;
 }

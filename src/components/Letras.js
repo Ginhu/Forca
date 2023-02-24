@@ -1,8 +1,11 @@
+import alfabeto from "../alfabeto"
+
 export default function Letras(props) {
     function escolheLetra(letra) {
         props.setHabilitar([...props.habilitar, letra])
         let novaPalavra = [...props.palavra]
         let novoEscondido = [...props.palavraEscondida]
+        console.log(novaPalavra, novoEscondido)
 
         if(!novaPalavra.includes(letra)) {
             props.setContador(props.contador+1)
@@ -13,6 +16,14 @@ export default function Letras(props) {
                 novoEscondido[index] = letra
                 props.setPalavraEscondida(novoEscondido)
             }
+        }
+
+        if(!novoEscondido.includes("_")) {
+            props.setJogoGanho("jogoGanho")
+            props.setHabilitar([...alfabeto])
+        } else if (props.contador == 5) {
+            props.setJogoPerdido("jogoPerdido")
+            props.setHabilitar([...alfabeto])
         }
 
         

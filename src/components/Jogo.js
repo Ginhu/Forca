@@ -11,6 +11,8 @@ export default function Jogo (props) {
         p=Palavra();
         props.setPalavra(p[0])
         props.setPalavraEscondida(p[1])
+        props.setJogoGanho("")
+        props.setJogoPerdido("")
     }
 
     return (
@@ -18,7 +20,7 @@ export default function Jogo (props) {
             <Imagem contador={props.contador} setContador={props.setContador}/>
             <div className="divComandos">
                 <div><button onClick={iniciarJogo}>Escolher Palavra</button></div>
-                <input value={props.palavraEscondida.join("")} disabled className={props.escondido}></input>
+                <input value={props.palavraEscondida.join("")} disabled className={`${props.escondido} ${props.jogoGanho} ${props.jogoPerdido}`}></input>
             </div>
         </div>
     )
