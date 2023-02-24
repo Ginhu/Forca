@@ -3,13 +3,13 @@ import palavras from "../palavras";
 import Palavra from "./Palavra";
 
 export default function Jogo (props) {
-    let p, p0, p1
+    let p
     function iniciarJogo() {
         props.setHabilitar([])
         props.setEscondido("")
         props.setContador(0)
-        p = Palavra();
-        props.setPalavra(p[0]);
+        p=Palavra();
+        props.setPalavra(p[0])
         props.setPalavraEscondida(p[1])
     }
 

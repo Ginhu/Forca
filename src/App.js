@@ -10,8 +10,8 @@ function App() {
   const [habilitar, setHabilitar] = useState(arr)
   const [escondido, setEscondido] = useState("escondido")
   const [contador, setContador] = useState(0)
-  const [palavra, setPalavra] = useState("")
-  const [palavraEscondida, setPalavraEscondida] = useState("");
+  const [palavra, setPalavra] = useState([])
+  const [palavraEscondida, setPalavraEscondida] = useState([])
 
   return (
     <div className="principal">
@@ -23,7 +23,11 @@ function App() {
       palavraEscondida={palavraEscondida} setPalavraEscondida={setPalavraEscondida}
       />
       <div className="divLetras">
-        {alfabeto.map((c)=> <Letras letra={c} habilitar={habilitar} setHabilitar={setHabilitar}/>)}
+        {alfabeto.map((c)=> <Letras key={c} letra={c} 
+        habilitar={habilitar} setHabilitar={setHabilitar}
+        palavra={palavra} palavraEscondida={palavraEscondida} setPalavraEscondida={setPalavraEscondida}
+        contador={contador} setContador={setContador}
+        />)}
       </div>
     </div>
   )
