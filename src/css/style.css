@@ -51,11 +51,21 @@
     font-size: 1.5vw;
 }
 
-.divComandos p {
-    font-size: 4vw;
+.divComandos input {
+    font-size: 2vw;
+    letter-spacing: 15px;
     margin-bottom: 5vh;
+    width: 33vw;
+    display: flex;
+    text-align: center;
+    border-style: none;
+    background-color: blue;
 }
 
 img {
     width: 25vw;
+}
+
+.escondido {
+    visibility: hidden;
 }

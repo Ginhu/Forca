@@ -6,10 +6,12 @@ import imagem4 from "../assets/forca4.png"
 import imagem5 from "../assets/forca5.png"
 import imagem6 from "../assets/forca6.png"
 
-export default function Imagem() {
+export default function Imagem(props) {
+    const imagens = [imagem0, imagem1, imagem2, imagem3, imagem4, imagem5, imagem6]
+
     return (
         <>
-            <img src={imagem1}/>
+            <img src={imagens[props.contador]}/>
         </>
     )
 }
