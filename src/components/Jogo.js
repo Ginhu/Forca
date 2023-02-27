@@ -20,7 +20,7 @@ export default function Jogo (props) {
             <Imagem contador={props.contador} setContador={props.setContador}/>
             <div className="divComandos">
                 <div><button onClick={iniciarJogo} data-test="choose-word">Escolher Palavra</button></div>
-                <input value={props.palavraEscondida.join("")} disabled className={`${props.escondido} ${props.jogoGanho} ${props.jogoPerdido}`} data-test="word"></input>
+                <input data-test="word" value={props.palavraEscondida.join("")} /* disabled */ className={`${props.escondido} ${props.jogoGanho} ${props.jogoPerdido}`}></input>
             </div>
         </div>
     )
