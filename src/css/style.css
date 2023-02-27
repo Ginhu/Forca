@@ -83,3 +83,8 @@ img {
 .jogoPerdido {
     color: #ff0000;
 }
+
+.botaoHabilitado {
+    background-color: #e1ecf4;
+    color: #7aa7c7;
+}
